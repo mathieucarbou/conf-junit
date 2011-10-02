@@ -1,5 +1,5 @@
 - Junit basics
-    - @Before, @After, @AfterClass, @BeforeClass, @Test
+    - @Test, @Before, @After, @AfterClass, @BeforeClass
     - assertions
     - suites
 - Junit advanced
@@ -20,3 +20,9 @@ http://blog.schauderhaft.de/2010/01/31/new-feature-of-junit-theories/
 Mockito
 - answer
 - mocks what & why
+http://code.google.com/p/mockito/
+
+EXAMPLE:
+ - approche TDD - systeme bancaire + concurrence dans virements
+ - MYCILA JUNIT
+ 
