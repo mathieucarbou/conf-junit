@@ -1,13 +1,12 @@
 package test;
 
 
-import org.hamcrest.CoreMatchers
 import org.junit.Test
 import static com.mycila.junit.matchers.ExceptionMatchers.*
 import static hamcrest.MyMatchers.amount
 import static hamcrest.MyMatchers.has
 import static my.bank.Account.account
-import static org.hamcrest.CoreMatchers.instanceOf
+import static org.hamcrest.Matchers.instanceOf
 import static org.junit.Assert.*
 
 /**
@@ -19,10 +18,8 @@ class Test_Adv_1 {
     void hamcrest_matchers() {
         assertEquals 0, account("4540-123-CARM").build().amount()
 
-        //noinspection GroovyAssignabilityCheck
         assertThat "default account's amount", account("4540-123-CARM").build(), is(amount(0))
 
-        //noinspection GroovyAssignabilityCheck
         assertThat "default account's amount", account("4540-123-CARM").build(), is(amount(1))
     }
 
@@ -32,7 +29,7 @@ class Test_Adv_1 {
             account("4540-123-CARM").withAmmount(-1)
             fail('must throw java.lang.IllegalArgumentException: Amount must be positive')
         } catch (Exception e) {
-            assertThat e, CoreMatchers.is(instanceOf(IllegalArgumentException))
+            assertThat e, is(instanceOf(IllegalArgumentException))
             assertThat e, has(message('Amount must be positive'))
         }
     }
