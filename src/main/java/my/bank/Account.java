@@ -39,7 +39,7 @@ public final class Account {
 
         public Builder withAmmount(int ammount) {
             if (ammount < 0) {
-                throw new IllegalArgumentException("Ammount must be positive");
+                throw new IllegalArgumentException("Amount must be positive");
             }
             account.amount = ammount;
             return this;
