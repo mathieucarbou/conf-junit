@@ -2,12 +2,13 @@ package test;
 
 
 import com.mycila.junit.rule.Duration
-import com.mycila.junit.rule.TestExecution
+
 import com.mycila.junit.rule.Times
 import org.junit.ClassRule
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.JUnitCore
+import com.mycila.junit.rule.TestRepeater
 
 /**
  * @author Mathieu Carbou (mathieu.carbou@gmail.com)
@@ -18,8 +19,8 @@ class Test_Adv_2_3 {
     @ClassRule public static Duration classDuration = new Duration()
     @Rule public Duration testDuration = new Duration()
     
-    @ClassRule public static TestExecution classExecution = new TestExecution()
-    @Rule public TestExecution testExecution = new TestExecution()
+    @ClassRule public static TestRepeater classExecution = new TestRepeater()
+    @Rule public TestRepeater testExecution = new TestRepeater()
 
     @Test @Times(3)
     void test_execution_in_parallel_3_times() {
